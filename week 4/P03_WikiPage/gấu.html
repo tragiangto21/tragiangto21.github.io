@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Wiki Page</title>
+  <meta charset="utf-8">
+  <title>The Brown Bear</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h1 { font-size: 48px; margin-bottom: 8px; }
+    p { line-height: 1.6; }
+    .columns { display: flex; gap: 30px; align-items: flex-start; }
+    .left { flex: 1; }
+    .right { flex: 1; text-align: center; }
+    img.bear { max-width: 100%; height: auto; border: 6px solid #eee; box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+    a { color: #1a0dab; }
+  </style>
 </head>
 <body>
   <h1>The Brown Bear</h1>
+
   <p>
     The brown bear (Ursus arctos) is native to parts of northern Eurasia and North America.
-    Its conservation status is currently "Least Concern." 
-    There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.
+    Its conservation status is currently "Least Concern." There are many subspecies within the brown bear species.
   </p>
 
   <a href="#">Learn More</a>
@@ -22,14 +37,26 @@
     <li>Nelsoni (extinct)</li>
   </ul>
 
-  <p>The following countries have the largest populations of brown bears:</p>
-  <ol>
-    <li>Russia</li>
-    <li>United States</li>
-    <li>Canada</li>
-  </ol>
+  <div class="columns">
+    <div class="left">
+      <p>The following countries have the largest populations of brown bears:</p>
+      <ol>
+        <li>Russia</li>
+        <li>United States</li>
+        <li>Canada</li>
+      </ol>
+    </div>
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/2010-kodiak-bear-1.jpg" 
-       alt="Brown Bear" width="400">
+    <div class="right">
+      <p><strong>Ảnh con gấu:</strong></p>
+
+      <!-- Option A: Dùng ảnh local (tải về và đặt tên bear.jpg trong cùng thư mục) -->
+      <img src="bear.jpg" alt="Brown bear" class="bear">
+
+      <!-- Option B: Dùng ảnh trực tuyến (bỏ comment dòng phía dưới nếu muốn thử) -->
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/2010-kodiak-bear-1.jpg" alt="Brown bear" class="bear"> -->
+    </div>
+  </div>
 </body>
 </html>
+
