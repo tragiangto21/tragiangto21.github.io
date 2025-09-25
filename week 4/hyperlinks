@@ -1,0 +1,42 @@
+Ok, mình sẽ viết cho bạn đoạn code HTML giống như trong ảnh “Wiki Page” nhé.
+Bạn chỉ cần copy vào file `wiki-page.html` là chạy được.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki Page</title>
+</head>
+<body>
+  <h1>The Brown Bear</h1>
+  <p>
+    The brown bear (Ursus arctos) is native to parts of northern Eurasia and North America.
+    Its conservation status is currently "Least Concern." 
+    There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.
+  </p>
+
+  <a href="#">Learn More</a>
+
+  <p>Here are some bear species:</p>
+  <ul>
+    <li>Arctos</li>
+    <li>Collarus</li>
+    <li>Horribilis</li>
+    <li>Nelsoni (extinct)</li>
+  </ul>
+
+  <p>The following countries have the largest populations of brown bears:</p>
+  <ol>
+    <li>Russia</li>
+    <li>United States</li>
+    <li>Canada</li>
+  </ol>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/2010-kodiak-bear-1.jpg" 
+       alt="Brown Bear" width="400">
+</body>
+</html>
+```
+
+👉 Bạn muốn mình thêm cả CSS để trang này nhìn đẹp hơn (ví dụ căn lề, đổi font, căn giữa ảnh) không?
