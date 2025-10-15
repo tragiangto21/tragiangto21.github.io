@@ -17,7 +17,7 @@
 }
 
 .menu ul {
-    list-style: inside disc;
+    list-style: inside disc; 
     box-shadow: 5px 5px 10px #000;
     border: 1px solid #000;
     width: 148px;
@@ -35,7 +35,8 @@
 }
 
 .menu li:hover {
-    background-color: #ff0;  
-    color: red;              
+    background-color: #ff0; 
+    color: red;             
     font-weight: bold;
 }
+
