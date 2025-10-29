@@ -14,12 +14,12 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #333;                     
-  box-shadow: -10px -10px 20px rgba(0, 128, 255, 0.6); 
+  box-shadow: 0 -10px 20px rgba(0, 128, 255, 0.6); 
   transition: 0.3s;
 }
 
 
 .color-box:hover {
-  box-shadow: 15px 15px 30px rgba(255, 0, 150, 0.5); 
+  box-shadow: -15px -15px 30px rgba(255, 0, 150, 0.5); 
   transform: translateY(-15px 5px);
 }
