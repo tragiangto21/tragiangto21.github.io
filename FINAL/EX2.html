@@ -2,25 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Computer Parts Price List</title>
+<title>Computer Parts Product List</title>
 
 <style>
     table{
         border-collapse: collapse;
-        width: 350px;
+        width: 420px;
         margin-top: 15px;
     }
 
     th, td{
         border: 1px solid black;
         padding: 10px;
-        text-align: left;
+    }
+
+    th{
+        background: #f2f2f2;
     }
 </style>
 
 <script>
     function changeColor(){
-        document.getElementById("partsTable").style.color = "red";
+        document.getElementById("productTable").style.color = "red";
     }
 </script>
 
@@ -28,15 +31,40 @@
 
 <body>
 
-<h2>Computer Parts Price List ™</h2>
+<h2>Danh sách sản phẩm linh kiện máy tính ™</h2>
 
-<table id="partsTable">
+<table id="productTable">
+
     <tr>
-        <th>Part •</th>
-        <th>Price</th>
+        <th>• Sản phẩm</th>
+        <th>Giá</th>
     </tr>
 
     <tr>
-        <td>CPU</td>
+        <td>CPU Intel i5</td>
         <td>$250</td>
     </tr>
+
+    <tr>
+        <td>RAM 16GB DDR4</td>
+        <td>$80</td>
+    </tr>
+
+    <tr>
+        <td>SSD 512GB</td>
+        <td>$120</td>
+    </tr>
+
+    <tr>
+        <td>Graphics Card RTX 3060</td>
+        <td>$400</td>
+    </tr>
+
+</table>
+
+<p>© 2026 Computer Shop</p>
+
+<button onclick="changeColor()">Change Color</button>
+
+</body>
+</html>
