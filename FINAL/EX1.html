@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Registration</title>
+
+<style>
+    body{
+        font-family: Arial;
+        display:flex;
+        justify-content:center;
+        margin-top:40px;
+    }
+
+    .form-container{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+        border:1px solid #ccc;
+        border-radius:8px;
+        width:350px;
+    }
+
+    label{
+        font-weight:bold;
+    }
+
+    input{
+        padding:8px;
+        border-radius:5px;
+        border:1px solid #bbb;
+    }
+
+    .strength{
+        font-weight:bold;
+        margin-top:-8px;
+    }
+
+    .weak{color:red;}
+    .medium{color:orange;}
+    .strong{color:green;}
+</style>
+</head>
+
+<body>
+
+<form class="form-container">
+
+    <label>Username</label>
+    <input type="text" id="username" required>
+    <span id="userMsg"></span>
+
+    <label>Password</label>
+    <input type="password" id="password" required>
+    <span id="strengthMsg" class="strength"></span>
+
+    <label>Profile Picture</label>
+    <input type="file" id="profile" accept=".jpg,.png" required>
+    <span id="fileMsg"></span>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<script>
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const profile = document.getElementById("profile");
+
+    const userMsg = document.getElementById("userMsg");
+    const strengthMsg = document.getElementById("strengthMsg");
+    const fileMsg = document.getElementById("fileMsg");
+
+    // Username validation
+    username.addEventListener("input", ()=>{
+        if(username.value.length < 5 || username.value.length > 15){
+            userMsg.innerHTML = "Username must be 5–15 characters";
+            userMsg.style.color = "red";
+        }else{
+            userMsg.innerHTML = "Valid username ✔";
+            userMsg.style.color = "green";
+        }
+    });
+
+    // Password strength check
+    password.addEventListener("input", ()=>{
+
+        const value = password.value;
+        let strength = 0;
+
+        if(/[A-Za-z]/.test(value)) strength++;
+        if(/[0-9]/.test(value)) strength++;
+        if(value.length >= 8) strength++;
+
+        if(strength===0){
+            strengthMsg.innerHTML="";
+        }
+        else if(strength===1){
+            strengthMsg.innerHTML="Weak";
+            strengthMsg.className="strength weak";
+        }
+        else if(strength===2){
+            strengthMsg.innerHTML="Medium";
+            strengthMsg.className="strength medium";
+        }
+        else{
+            strengthMsg.innerHTML="Strong";
+            strengthMsg.className="strength strong";
+        }
+    });
+
+    // File validation
+    profile.addEventListener("change", ()=>{
+        const file = profile.files[0];
+
+        if(file && !file.name.match(/\.(jpg|png)$/i)){
+            fileMsg.innerHTML="File must be JPG or PNG";
+            fileMsg.style.color="red";
+            profile.value="";
+        }else{
+            fileMsg.innerHTML="Valid file ✔";
+            fileMsg.style.color="green";
+        }
+    });
+</script>
+
+</body>
+</html>
