@@ -1,23 +1,55 @@
-body{
-    font-family: Arial;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    align-items: center;
+    height: 100vh;
 }
 
-form{
+.register-form {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 350px;
+
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border: 1px solid gray;
-    padding: 20px;
-    width: 350px;
+    gap: 15px;
 }
 
-input{
+.register-form h2 {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
     padding: 8px;
+    font-size: 14px;
 }
 
-#strength{
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+small {
+    color: red;
+    font-size: 12px;
+}
+
+#strengthIndicator {
+    margin-top: 5px;
     font-weight: bold;
 }
