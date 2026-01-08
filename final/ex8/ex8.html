@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8 - Newsletter Subscription</title>
+    <link rel="stylesheet" href="ex8.css">
+</head>
+<body>
+
+    <h2>Newsletter Subscription</h2>
+
+    <form id="subscribeForm">
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label>Subscription Type:</label>
+        <div class="option-group">
+            <input type="radio" name="subType" value="Monthly"> Monthly
+            <input type="radio" name="subType" value="Yearly"> Yearly
+        </div>
+
+        <label>Interests:</label>
+        <div class="option-group">
+            <input type="checkbox" class="interest" value="News"> News
+            <input type="checkbox" class="interest" value="Events"> Events
+            <input type="checkbox" class="interest" value="Offers"> Offers
+        </div>
+
+        <button type="submit">Subscribe</button>
+    </form>
+
+    <p id="successMsg"></p>
+
+    <script src="ex8.js"></script>
+</body>
+</html>
