@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>User Registration</title>
-<link rel="stylesheet" href="FINAL/EX1.css">
+    <meta charset="UTF-8">
+    <title>Exercise 1 - User Registration</title>
+    <link rel="stylesheet" href="ex1.css">
 </head>
-
 <body>
 
-<form onsubmit="return validateForm()">
+    <form class="register-form" id="registerForm">
+        <h2>User Registration</h2>
 
-<h3>User Registration</h3>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" required>
+            <small id="usernameError"></small>
+        </div>
 
-<input id="username" type="text" placeholder="Username">
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" required>
+            <div id="strengthIndicator"></div>
+            <small id="passwordError"></small>
+        </div>
 
-<input id="password" type="password" placeholder="Password"
-       onkeyup="checkStrength()">
+        <div class="form-group">
+            <label>Profile Picture</label>
+            <input type="file" id="profilePic" accept=".jpg,.jpeg,.png" required>
+            <small id="imageError"></small>
+        </div>
 
-<div>Password strength: <span id="strength">–</span></div>
+        <button type="submit">Register</button>
+    </form>
 
-<input id="file" type="file">
-
-<button type="submit">Register</button>
-
-</form>
-
-<script src="FINAL/EX1.js"></script>
-
+    <script src="ex1.js"></script>
 </body>
 </html>
