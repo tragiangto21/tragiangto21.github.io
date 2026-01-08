@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - Tabbed Interface</title>
+    <link rel="stylesheet" href="ex5.css">
+</head>
+<body>
+
+    <h1>Tabbed Content Interface</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('features', this)">→ Features ®</button>
+        <button class="tab" onclick="switchTab('pricing', this)">Pricing €</button>
+        <button class="tab" onclick="switchTab('reviews', this)">Reviews</button>
+        <button class="tab" onclick="switchTab('support', this)">Support</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content active" id="features">
+        <p>Our product includes powerful features to boost your productivity.</p>
+    </div>
+
+    <div class="tab-content" id="pricing">
+        <p>Affordable pricing plans suitable for individuals and businesses.</p>
+    </div>
+
+    <div class="tab-content" id="reviews">
+        <p>Customers love our product and give positive feedback.</p>
+    </div>
+
+    <div class="tab-content" id="support">
+        <p>24/7 customer support is available for all users.</p>
+    </div>
+
+    <script src="ex5.js"></script>
+</body>
+</html>
