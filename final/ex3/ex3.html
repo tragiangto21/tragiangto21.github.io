@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3 - Student Grade Calculator</title>
+    <link rel="stylesheet" href="ex3.css">
+</head>
+<body>
+
+    <h2>Student Grades &reg;</h2>
+
+    <table id="gradeTable">
+        <tr>
+            <th>Subject &sect;</th>
+            <th>Grade (&ge; 0)</th>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td><input type="number" class="grade" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td><input type="number" class="grade" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td>Chemistry</td>
+            <td><input type="number" class="grade" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td><input type="number" class="grade" min="0" max="100"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <button onclick="calculateAverage()">Calculate Average</button>
+
+    <p id="result"></p>
+
+    <script src="ex3.js"></script>
+</body>
+</html>
