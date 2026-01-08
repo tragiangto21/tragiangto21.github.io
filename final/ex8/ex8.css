@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+form {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border: 1px solid #333;
+    padding: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 6px;
+    border: 1px solid #999;
+}
+
+.option-group {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+}
+
+button {
+    padding: 8px;
+}
+
+#successMsg {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
