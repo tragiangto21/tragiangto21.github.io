@@ -1,12 +1,11 @@
-let showVegetarianOnly = false;
+let vegetarianOnly = false;
 
 function filterMenu() {
     const items = document.getElementsByClassName("menu-item");
-
-    showVegetarianOnly = !showVegetarianOnly;
+    vegetarianOnly = !vegetarianOnly;
 
     for (let i = 0; i < items.length; i++) {
-        if (showVegetarianOnly) {
+        if (vegetarianOnly) {
             if (!items[i].classList.contains("vegetarian")) {
                 items[i].style.display = "none";
             }
