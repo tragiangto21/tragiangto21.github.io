@@ -3,33 +3,26 @@ body {
     padding: 20px;
 }
 
-button {
-    padding: 8px 12px;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-
 nav {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    margin-top: 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #333;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
 .bullet {
+    margin: 0 8px;
     color: #555;
 }
 
-/* Hidden state */
 .hidden {
     display: none;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
 }
