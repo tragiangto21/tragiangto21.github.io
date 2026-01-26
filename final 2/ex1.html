@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1: Registration Form</title>
+    <style>
+        /* Yêu cầu Flexbox [cite: 13] */
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; }
+        form { display: flex; flex-direction: column; gap: 10px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; width: 300px; }
+        .strength { font-size: 0.9em; font-weight: bold; }
+        .weak { color: red; }
+        .medium { color: orange; }
+        .strong { color: green; }
+    </style>
+</head>
+<body>
+
+<form id="regForm">
+    <h3>Register</h3>
+    <label>Username:</label>
+    <input type="text" id="username" placeholder="5-15 characters">
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Letters & numbers">
+    <span id="strengthText" class="strength"></span>
+
+    <label>Profile Picture:</label>
+    <input type="file" id="profilePic" accept=".jpg, .png">
+
+    <button type="button" onclick="validateForm()">Register</button>
+</form>
+
+<script>
+    // Xử lý realtime password strength [cite: 14]
+    document.getElementById('password').addEventListener('input', function() {
+        const password = this.value;
+        const text = document.getElementById('strengthText');
+        
+        // Kiểm tra logic đơn giản để đổi màu
+        if (password.length === 0) {
+            text.innerText = "";
+        } else if (password.length < 6) {
+            text.innerText = "Weak";
+            text.className = "strength weak";
+        } else if (password.match(/[0-9]/) && password.match(/[a-zA-Z]/)) {
+            text.innerText = "Strong";
+            text.className = "strength strong";
+        } else {
+            text.innerText = "Medium";
+            text.className = "strength medium";
+        }
+    });
+
+    function validateForm() {
+        const user = document.getElementById('username').value;
+        const pass = document.getElementById('password').value;
+        const file = document.getElementById('profilePic').value;
+
+        // Validation rules [cite: 10, 11, 12]
+        if (user.length < 5 || user.length > 15) {
+            alert("Username must be 5-15 characters!");
+        } else if (!pass.match(/[0-9]/) || !pass.match(/[a-zA-Z]/)) {
+            alert("Password must contain numbers and letters!");
+        } else if (!file.match(/\.(jpg|png)$/i)) { // Kiểm tra đuôi file
+            alert("Image must be JPG or PNG!");
+        } else {
+            alert("Registration Successful!");
+        }
+    }
+</script>
+</body>
+</html>
