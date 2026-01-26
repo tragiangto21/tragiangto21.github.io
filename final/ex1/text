@@ -1,0 +1,180 @@
+
+
+
+## **Exercise 1: Create a user registration form with these requirements:**
+
+1. Include these fields:
+
+* Username (text input)
+* Password (password input)
+* Profile Picture (file input)
+
+2. Add validation rules:
+
+* Username must be 5–15 characters
+* Password must contain numbers and letters
+* Image file must be JPG or PNG
+
+3. Style form with Flexbox layout
+
+4. Add password strength indicator that:
+
+* Shows weak / medium / strong based on password
+* Updates in real-time as user types
+
+---
+
+## **Exercise 2: Create a computer parts price list table with these requirements:**
+
+1. Create table with 4 computer parts and prices
+
+2. Use HTML5 structure (DOCTYPE, head, body)
+
+3. Include these HTML entities: ©, ™, •
+
+4. Style table with borders and padding
+
+5. Add "Change Color" button that:
+
+* When clicked, changes all table text to red
+* Use changeColor() function and getElementById()
+
+---
+
+## **Exercise 3: Create a student grade calculator with these requirements:**
+
+1. Create a table showing 4 subjects and grades
+
+2. Use HTML5 structure (DOCTYPE, head, body)
+
+3. Include these HTML entities: ®, §, ≥
+
+4. Style table with alternating row colors
+
+5. Add "Calculate Average" button that:
+
+* When clicked, calculates and displays average grade
+* Use calculateAverage() function and querySelectorAll()
+
+---
+
+## **Exercise 4: Create a restaurant menu interface with these requirements:**
+
+1. Create sections for:
+
+* Appetizers ®
+* Main Course §
+* Desserts
+* Drinks
+
+2. Add prices with currency symbol (≥)
+
+3. Add "Filter Menu" button that:
+
+* Toggles between showing all items or only vegetarian options
+* Use filterMenu() function
+* Use getElementsByClassName()
+
+---
+
+## **Exercise 5: Create a tabbed content interface with these requirements:**
+
+1. Create 4 tabs:
+
+* Features ®
+* Pricing €
+* Reviews
+* Support
+
+2. Add arrow icons (→) to indicate active tab
+
+3. Style tabs with different states (active / inactive)
+
+4. Add tab functionality that:
+
+* Shows corresponding content when tab is clicked
+* Use switchTab() function
+* Use classList.add() and classList.remove()
+
+---
+
+## **Exercise 6: Create a bookstore website navigation with these requirements:**
+
+1. Create navigation with 4 links:
+
+* Home
+* Books ©
+* Authors ™
+* Contact
+
+2. Add bullets (•) between navigation items
+
+3. Add "Toggle Menu" button that:
+
+* Shows / hides the navigation menu
+* Use toggleMenu() function
+* Use classList.toggle("hidden")
+
+---
+
+## **Exercise 7: Create a simple contact form with these requirements:**
+
+1. Include these fields:
+
+* Name (text input)
+* Email (email input)
+* Message (textarea)
+
+2. Add proper labels and submit button
+
+3. Style form with proper spacing and borders
+
+4. Add basic validation:
+
+* Check if fields are empty
+* Show success message when all filled
+
+---
+
+## **Exercise 8: Create a newsletter subscription system with these requirements:**
+
+1. Include these elements:
+
+* Full Name (text input)
+* Email (email input)
+* Subscription Type (radio buttons: Monthly / Yearly)
+* Interests (checkboxes)
+
+2. Add form validation with these rules:
+
+* Email must contain @ and domain
+* At least one interest must be selected
+
+3. Style form with CSS Grid layout
+
+4. Show success message when form is valid
+
+---
+
+## **Exercise 9: Create a product showcase with these requirements:**
+
+1. Create a grid of 4 product cards showing:
+
+* Product name
+* Price
+* Short description
+
+2. Use HTML5 structure (DOCTYPE, head, body)
+
+3. Include these HTML entities: ®, €, →
+
+4. Style cards with box-shadow and hover effects
+
+5. Add "Toggle Price" button that:
+
+* When clicked, hides all prices
+* Use togglePrice() function and getElementsByClassName()
+
+-
+
+
