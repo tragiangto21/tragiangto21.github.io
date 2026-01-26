@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <title>Exercise 2: Price List</title>
+    <style>
+        /* Style table borders and padding [cite: 21] */
+        table { border-collapse: collapse; width: 50%; margin: 20px auto; }
+        th, td { border: 1px solid black; padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<table id="priceTable">
+    <tr>
+        <th>Part Name &trade;</th> <th>Price (&copy;)</th> </tr>
+    <tr>
+        <td>CPU Intel &middot; Core i5</td> <td>$200</td>
+    </tr>
+    <tr>
+        <td>RAM 16GB</td>
+        <td>$80</td>
+    </tr>
+    <tr>
+        <td>SSD 500GB</td>
+        <td>$60</td>
+    </tr>
+    <tr>
+        <td>Monitor 24"</td>
+        <td>$150</td>
+    </tr>
+</table>
+
+<div style="text-align:center">
+    <button onclick="changeColor()">Change Color</button>
+</div>
+
+<script>
+    function changeColor() {
+        // Sử dụng getElementById [cite: 25]
+        var table = document.getElementById("priceTable");
+        // Đổi màu chữ sang đỏ [cite: 24]
+        table.style.color = "red";
+    }
+</script>
+</body>
+</html>
