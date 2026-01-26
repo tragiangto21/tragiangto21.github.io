@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - Tabbed Interface</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Tabs container */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Tab button */
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid #333;
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+
+        /* Active tab */
+        .tab.active {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Tab content */
+        .content {
+            display: none;
+            border: 1px solid #333;
+            padding: 15px;
+        }
+
+        /* Show active content */
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tabbed Content Interface</h2>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('features')">→ Features ®</div>
+        <div class="tab" onclick="switchTab('pricing')">Pricing €</div>
+        <div class="tab" onclick="switchTab('reviews')">Reviews</div>
+        <div class="tab" onclick="switchTab('support')">Support</div>
+    </div>
+
+    <!-- Tab contents -->
+    <div id="features" class="content active">
+        <p>Our product offers powerful features and high performance.</p>
+    </div>
+
+    <div id="pricing" class="content">
+        <p>Flexible pricing plans for individuals and businesses.</p>
+    </div>
+
+    <div id="reviews" class="content">
+        <p>Customers love our service and reliability.</p>
+    </div>
+
+    <div id="support" class="content">
+        <p>24/7 support via chat, email, and phone.</p>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            // Remove active class from all tabs
+            const tabs = document.getElementsByClassName("tab");
+            for (let tab of tabs) {
+                tab.classList.remove("active");
+                tab.innerHTML = tab.innerHTML.replace("→ ", "");
+            }
+
+            // Remove active class from all contents
+            const contents = document.getElementsByClassName("content");
+            for (let content of contents) {
+                content.classList.remove("active");
+            }
+
+            // Add active class to clicked tab
+            event.target.classList.add("active");
+            event.target.innerHTML = "→ " + event.target.innerHTML;
+
+            // Show corresponding content
+            document.getElementById(tabId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
