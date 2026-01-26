@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4: Menu</title>
+    <style>
+        .menu-section { margin-bottom: 20px; }
+        .item { padding: 5px; border-bottom: 1px dashed #ccc; }
+    </style>
+</head>
+<body>
+
+<h1>Restaurant Menu &sect;</h1> <button onclick="filterMenu()">Filter Vegetarian Options</button>
+
+<div id="menu">
+    <h3>Appetizers</h3>
+    <div class="item vegetarian">Spring Rolls - 5&euro;</div> <div class="item">Chicken Wings - 7&euro;</div>
+
+    <h3>Main Course</h3>
+    <div class="item">Steak - 20&euro;</div>
+    <div class="item vegetarian">Pasta Prim - 12&euro;</div>
+
+    <h3>Desserts</h3>
+    <div class="item vegetarian">Fruit Salad - 5&euro;</div>
+    <div class="item">Cake - 6&euro;</div>
+</div>
+
+<script>
+    var isFiltered = false;
+
+    function filterMenu() { // [cite: 38]
+        // Sử dụng getElementsByClassName [cite: 39]
+        var items = document.getElementsByClassName("item");
+        
+        isFiltered = !isFiltered; // Đảo trạng thái lọc
+
+        for (var i = 0; i < items.length; i++) {
+            // Kiểm tra nếu món này KHÔNG có class vegetarian
+            if (!items[i].classList.contains("vegetarian")) {
+                // Nếu đang bật lọc thì ẩn, tắt lọc thì hiện
+                items[i].style.display = isFiltered ? "none" : "block";
+            }
+        }
+    }
+</script>
+</body>
+</html>
