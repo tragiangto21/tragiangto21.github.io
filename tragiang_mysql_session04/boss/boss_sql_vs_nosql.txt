@@ -1,0 +1,17 @@
+Scenario 1: High-velocity social media feed
+
+Choice: NoSQL
+
+Reasons:
+1. Horizontal scalability
+2. Flexible schema
+3. High write performance
+
+Scenario 2: Secure bank ledger
+
+Choice: SQL
+
+Reasons:
+1. ACID transactions
+2. Strong data integrity
+3. Reliability and security
