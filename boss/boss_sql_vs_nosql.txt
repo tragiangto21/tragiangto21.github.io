@@ -1,0 +1,30 @@
+Scenario 1: High-velocity social media feed
+
+Choice: NoSQL
+
+Reasons:
+
+1. Horizontal scalability
+Social media platforms generate huge amounts of data and require the system to scale across many servers. NoSQL databases support horizontal scaling better than traditional SQL databases.
+
+2. Flexible schema
+Social media data can include text, images, videos, likes, and comments. NoSQL databases allow flexible schema design, making it easier to store different types of data.
+
+3. High write performance
+Social media platforms receive thousands of posts, likes, and comments per second. NoSQL databases are optimized for high write operations.
+
+
+Scenario 2: Secure bank ledger
+
+Choice: SQL
+
+Reasons:
+
+1. ACID transactions
+Banking systems require strict consistency and reliability. SQL databases guarantee ACID properties (Atomicity, Consistency, Isolation, Durability), which are critical for financial transactions.
+
+2. Strong data integrity
+Bank accounts and financial transactions require strong relationships between data. SQL databases enforce constraints and relationships using foreign keys.
+
+3. Reliability and security
+Relational databases are widely used in financial systems because they provide stable, secure, and reliable data management.
