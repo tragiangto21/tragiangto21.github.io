@@ -1,4 +1,3 @@
-# Database Normalization Challenge
 
 ## Part 1: Normalization
 
@@ -24,56 +23,84 @@ Example data:
 | 2 | Tran Binh | 101 | Database Systems | Dr. Le | le@uni.edu | A- |
 
 ### Problems
-The table has redundancy because:
+
+The table contains redundant data:
 - StudentName repeats for the same StudentID
 - CourseName repeats for the same CourseID
 - Professor information repeats for each course
-- This may cause update anomalies
+- This can cause update anomalies
 
-### Normalized Tables (3NF)
+### Normalization to 3NF
 
-**STUDENTS**
-
+#### STUDENTS
 StudentID (PK)  
 StudentName
 
-**PROFESSORS**
-
+#### PROFESSORS
 ProfessorEmail (PK)  
 ProfessorName
 
-**COURSES**
-
+#### COURSES
 CourseID (PK)  
 CourseName  
 ProfessorEmail (FK)
 
-**ENROLLMENTS**
-
+#### ENROLLMENTS
 StudentID (FK)  
 CourseID (FK)  
-Grade
+Grade  
 
 Primary Key: (StudentID, CourseID)
 
----
+### Benefits of Normalization
 
-## Part 2: Relationships
-
-STUDENTS (1) ---- (N) ENROLLMENTS  
-
-COURSES (1) ---- (N) ENROLLMENTS  
-
-PROFESSORS (1) ---- (N) COURSES
+- Eliminates redundant data  
+- Prevents update anomalies  
+- Improves data integrity  
+- Makes the database easier to maintain  
 
 ---
 
-## Final Schema
+# Part 2: Relationships
 
-STUDENTS(StudentID PK, StudentName)
+### 1. AUTHOR – BOOK
+Relationship Type: One-to-Many (1:N)  
+FK Location: BOOK table (AuthorID as FK)
 
-PROFESSORS(ProfessorEmail PK, ProfessorName)
+Explanation: One author can write many books, but each book has one author.
 
-COURSES(CourseID PK, CourseName, ProfessorEmail FK)
+---
 
-ENROLLMENTS(StudentID FK, CourseID FK, Grade)
+### 2. CITIZEN – PASSPORT
+Relationship Type: One-to-One (1:1)  
+FK Location: PASSPORT table (CitizenID as FK)
+
+Explanation: One citizen has one passport, and each passport belongs to one citizen.
+
+---
+
+### 3. CUSTOMER – ORDER
+Relationship Type: One-to-Many (1:N)  
+FK Location: ORDER table (CustomerID as FK)
+
+Explanation: One customer can place many orders, but each order belongs to one customer.
+
+---
+
+### 4. STUDENT – CLASS
+Relationship Type: Many-to-Many (N:N)  
+FK Location: Junction table (STUDENT_CLASS)
+
+STUDENT_CLASS table:
+StudentID (FK)  
+ClassID (FK)
+
+Explanation: A student can join many classes and a class can have many students.
+
+---
+
+### 5. TEAM – PLAYER
+Relationship Type: One-to-Many (1:N)  
+FK Location: PLAYER table (TeamID as FK)
+
+Explanation: One team has many players, but each player belongs to one team.
